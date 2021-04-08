@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #275dad;
+}
+
+div.car {
+  width: 100px;
+}
+
+div.car > img {
+  width: 100%;
+}

@@ -20,3 +20,23 @@ div.car {
 div.car > img {
   width: 100%;
 }
+
+.direction-down {
+  transform: rotate(0.25turn);
+}
+
+.direction-up {
+  transform: rotate(-0.25turn);
+}
+
+.direction-left {
+  transform: rotate(0.5turn);
+}
+
+.direction-right {
+  transform: rotate(0);
+}
+
+.location {
+  transform: translate(0);
+}

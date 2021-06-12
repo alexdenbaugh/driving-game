@@ -18,8 +18,20 @@ function changeDirection(direction) {
 }
 
 function go() {
-  carData.location.x += 5;
-  $car.style.left = `${carData.location.x}px`;
+  var direction = carData.direction;
+  if (direction === 'right') {
+    carData.location.x += 10;
+    $car.style.left = `${carData.location.x}px`;
+  } else if (direction === 'left') {
+    carData.location.x -= 10;
+    $car.style.left = `${carData.location.x}px`;
+  } else if (direction === 'up') {
+    carData.location.y -= 10;
+    $car.style.top = `${carData.location.y}px`;
+  } else if (direction === 'down') {
+    carData.location.y += 10;
+    $car.style.top = `${carData.location.y}px`;
+  }
 }
 
 document.addEventListener('keydown', function (event) {

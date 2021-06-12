@@ -6,6 +6,8 @@ var carData = {
     x: 0,
     y: 0
   },
+  carId: null,
+  started: false,
   controlKeys: ['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', ' ']
 };
 
@@ -33,6 +35,12 @@ document.addEventListener('keydown', function (event) {
   } else if (event.key === 'ArrowRight') {
     changeDirection('right');
   } else if (event.key === ' ') {
-    setInterval(go, 16);
+    if (carData.started) {
+      clearInterval(carData.carId);
+      carData.started = false;
+    } else {
+      carData.carId = setInterval(go, 16);
+      carData.started = true;
+    }
   }
 });

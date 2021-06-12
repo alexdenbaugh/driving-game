@@ -1,15 +1,23 @@
+var $car = document.querySelector('img');
+
 var carData = {
   direction: 'right',
-  position: [0, 0],
-  controlKeys: ['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight']
+  location: {
+    x: 0,
+    y: 0
+  },
+  controlKeys: ['ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', ' ']
 };
-// var $carDiv = document.querySelector('div.car');
-var $car = document.querySelector('img');
 
 function changeDirection(direction) {
   $car.setAttribute('data-direction', direction);
   $car.className = 'direction-' + direction;
   carData.direction = direction;
+}
+
+function go() {
+  carData.location.x += 5;
+  $car.style.left = `${carData.location.x}px`;
 }
 
 document.addEventListener('keydown', function (event) {
@@ -24,5 +32,7 @@ document.addEventListener('keydown', function (event) {
     changeDirection('left');
   } else if (event.key === 'ArrowRight') {
     changeDirection('right');
+  } else if (event.key === ' ') {
+    setInterval(go, 16);
   }
 });

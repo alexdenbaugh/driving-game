@@ -39,5 +39,5 @@ img {
 .direction-right,
 .direction-down,
 .direction-left {
-  transition: transform, 0.25s;
+  transition: transform 0.25s;
 }

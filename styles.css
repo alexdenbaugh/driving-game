@@ -4,43 +4,40 @@
 
 body {
   margin: 0;
-}
-
-.container {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
   background-color: #275dad;
+  position: relative;
 }
 
-div.car {
+img {
   width: 100px;
-}
-
-div.car > img {
-  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .direction-down {
   transform: rotate(0.25turn);
-  transition: transform, 0.25s;
 }
 
 .direction-up {
   transform: rotate(-0.25turn);
-  transition: transform, 0.25s;
 }
 
 .direction-left {
   transform: rotate(0.5turn);
-  transition: transform, 0.25s;
 }
 
 .direction-right {
   transform: rotate(0);
-  transition: transform, 0.25s;
 }
 
 .location {
   transform: translate(0);
+}
+
+.direction-up,
+.direction-right,
+.direction-down,
+.direction-left {
+  transition: transform 0.25s;
 }

@@ -12,7 +12,6 @@ var carData = {
 };
 
 function changeDirection(direction) {
-  $car.setAttribute('data-direction', direction);
   $car.className = 'direction-' + direction;
   carData.direction = direction;
 }

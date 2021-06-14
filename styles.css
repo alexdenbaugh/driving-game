@@ -4,12 +4,6 @@
 
 body {
   margin: 0;
-}
-
-.container {
-  margin: 0;
-  width: 100%;
-  height: 100vh;
   background-color: #275dad;
   position: relative;
 }
@@ -23,24 +17,27 @@ img {
 
 .direction-down {
   transform: rotate(0.25turn);
-  transition: transform, 0.25s;
 }
 
 .direction-up {
   transform: rotate(-0.25turn);
-  transition: transform, 0.25s;
 }
 
 .direction-left {
   transform: rotate(0.5turn);
-  transition: transform, 0.25s;
 }
 
 .direction-right {
   transform: rotate(0);
-  transition: transform, 0.25s;
 }
 
 .location {
   transform: translate(0);
+}
+
+.direction-up,
+.direction-right,
+.direction-down,
+.direction-left {
+  transition: transform, 0.25s;
 }
